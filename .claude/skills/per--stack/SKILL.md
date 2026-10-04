@@ -1,6 +1,6 @@
 # Skill: per--stack
 
-Añade o actualiza entradas en los stack docs de `architect/IT_stacks/`.
+Añade o actualiza entradas en los stack docs de `architect/assets/IT_stacks/`.
 
 ## Trigger
 
@@ -10,11 +10,11 @@ Usar cuando el usuario invoque `/per--stack [texto]` o pida "añadir al stack", 
 
 ### 1. Localizar el framework
 
-Las rutas son relativas a la raíz del proyecto: `architect/IT_stacks/`. Si `architect/` no existe, informa que el Architect Framework no está instalado (`sys--template-pull architect` + `architect/INIT.md`) y detente.
+Las rutas son relativas a la raíz del proyecto: `architect/assets/IT_stacks/`. Si `architect/` no existe, informa que el Architect Framework no está instalado (`sys--template-pull architect` + `architect/INIT.md`) y detente.
 
 ### 2. Identificar stack file
 
-Lee `architect/IT_stacks/_index_stacks.md`. Determina a qué fichero pertenece la nueva info. Si no es obvio, muestra la tabla al usuario y pregunta.
+Lee `architect/assets/IT_stacks/_index_stacks.md`. Determina a qué fichero pertenece la nueva info. Si no es obvio, muestra la tabla al usuario y pregunta.
 
 ### 3. Leer el stack file
 

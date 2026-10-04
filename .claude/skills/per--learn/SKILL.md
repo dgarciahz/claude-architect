@@ -1,6 +1,6 @@
 # Skill: per--learn
 
-Añade uno o varios aprendizajes a `architect/learnings.md` (o a un fichero temático de `architect/learnings/`) del proyecto.
+Añade uno o varios aprendizajes a `architect/assets/learnings.md` (o a un fichero temático de `architect/assets/learnings/`) del proyecto.
 
 ## Trigger
 
@@ -10,7 +10,7 @@ Usar cuando el usuario invoque `/per--learn` o pida guardar un aprendizaje, corr
 
 ### 1. Localizar el framework
 
-Las rutas son relativas a la raíz del proyecto: `architect/learnings.md` y `architect/learnings/`. Si `architect/` no existe, informa que el Architect Framework no está instalado (`sys--template-pull architect` + `architect/INIT.md`) y detente.
+Las rutas son relativas a la raíz del proyecto: `architect/assets/learnings.md` y `architect/assets/learnings/`. Si `architect/` no existe, informa que el Architect Framework no está instalado (`sys--template-pull architect` + `architect/INIT.md`) y detente.
 
 ### 2. Determinar el aprendizaje
 
@@ -20,20 +20,20 @@ Si no hay argumento, pregunta al usuario qué aprendizaje quiere guardar.
 
 ### 2b. Determinar destino
 
-Lee `architect/learnings/_index.md`. Si el fichero no existe aún, el destino es `architect/learnings.md` directamente — omite este paso.
+Lee `architect/assets/learnings/_index.md`. Si el fichero no existe aún, el destino es `architect/assets/learnings.md` directamente — omite este paso.
 
-Pregunta al usuario: "¿Es un learning transversal (va a `architect/learnings.md`) o específico de una temática?"
+Pregunta al usuario: "¿Es un learning transversal (va a `architect/assets/learnings.md`) o específico de una temática?"
 
-- **Transversal** → destino = `architect/learnings.md`. Continúa al paso 3.
+- **Transversal** → destino = `architect/assets/learnings.md`. Continúa al paso 3.
 - **Temático** → muestra la tabla del índice y pregunta qué fichero usar. El usuario elige uno existente o escribe un nombre nuevo.
   - Si es un fichero nuevo:
     1. Pide al usuario: temas que cubre y en qué contexto cargarlo (una línea cada uno).
-    2. Crea `architect/learnings/<nombre>.md` con cabecera mínima:
+    2. Crea `architect/assets/learnings/<nombre>.md` con cabecera mínima:
        ```markdown
        # Learnings — <Nombre del tema>
        ```
     3. Añade una fila en la tabla de `_index.md` con Fichero, Temas y Cuándo cargar.
-  - Destino = `architect/learnings/<nombre>.md`
+  - Destino = `architect/assets/learnings/<nombre>.md`
 
 ### 3. Estructurar el aprendizaje
 
@@ -49,7 +49,7 @@ Si falta información clave para algún campo, pregunta solo lo necesario — no
 
 ### 4. Escribir en learnings.md
 
-Lee `architect/learnings.md` y añade al final cada aprendizaje con este formato:
+Lee `architect/assets/learnings.md` y añade al final cada aprendizaje con este formato:
 
 ```markdown
 ## YYYY-MM-DD — [tema en 3-6 palabras]

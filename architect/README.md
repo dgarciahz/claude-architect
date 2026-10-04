@@ -17,17 +17,19 @@ architect/
 ├── INIT.md
 ├── README.md
 ├── config/{manifest.yaml, version}
-├── learnings.md        ← learnings transversales
-├── learnings/          ← learnings temáticos (_index.md + ficheros)
-└── IT_stacks/          ← recetas por plataforma (_index_stacks.md + ficheros)
+├── skills/                  ← pseudo-skills (invocación explícita por ruta); vacío por ahora
+└── assets/
+    ├── learnings.md         ← learnings transversales
+    ├── learnings/           ← learnings temáticos (_index.md + ficheros)
+    └── IT_stacks/           ← recetas por plataforma (_index_stacks.md + ficheros)
 ```
 
 ## Skills
 
 | Skill | Descripción |
 |-------|-------------|
-| `/per--learn` | Añade aprendizajes a `architect/learnings.md` o a un fichero temático de `architect/learnings/` |
-| `/per--stack` | Añade o actualiza entradas en `architect/IT_stacks/` |
+| `/per--learn` | Añade aprendizajes a `architect/assets/learnings.md` o a un fichero temático de `architect/assets/learnings/` |
+| `/per--stack` | Añade o actualiza entradas en `architect/assets/IT_stacks/` |
 
 ## Actualizar
 

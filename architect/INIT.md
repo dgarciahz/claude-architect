@@ -2,7 +2,7 @@
 
 Instrucciones para inicializar el Architect Framework en el proyecto actual. Es autocontenido e idempotente: puede ejecutarse varias veces.
 
-El framework aporta conocimiento de arquitectura transversal (no ligado a un usuario): `architect/learnings.md`, `architect/learnings/` y `architect/IT_stacks/`, más los skills `/per--learn` y `/per--stack`, que escriben directamente en esos ficheros. La fuente de verdad es el repo `claude-architect`; lo que se añada en un proyecto se propaga con `sys--template-push architect`.
+El framework aporta conocimiento de arquitectura transversal (no ligado a un usuario): `architect/assets/learnings.md`, `architect/assets/learnings/` y `architect/assets/IT_stacks/`, más los skills `/per--learn` y `/per--stack`, que escriben directamente en esos ficheros. La fuente de verdad es el repo `claude-architect`; lo que se añada en un proyecto se propaga con `sys--template-push architect`.
 
 ## Cómo invocar
 
@@ -15,11 +15,11 @@ El framework aporta conocimiento de arquitectura transversal (no ligado a un usu
 
 ### Paso 1 — Verificar estructura
 
-Comprueba que existen `architect/learnings.md`, `architect/learnings/_index.md` y `architect/IT_stacks/_index_stacks.md`. Si falta alguno, el pull del template está incompleto: informa y detente. NUNCA los recrees vacíos.
+Comprueba que existen `architect/assets/learnings.md`, `architect/assets/learnings/_index.md` y `architect/assets/IT_stacks/_index_stacks.md`. Si falta alguno, el pull del template está incompleto: informa y detente. NUNCA los recrees vacíos.
 
 ### Paso 2 — Actualizar CLAUDE.md (obligatorio)
 
-Los ficheros de arquitectura se cargan desde `architect/`, no desde `CLAUDE_PERSONAL_DIR`. Este paso es lo que hace que el framework tenga efecto: no lo omitas.
+Los ficheros de arquitectura se cargan desde `architect/assets/`, no desde `CLAUDE_PERSONAL_DIR`. Este paso es lo que hace que el framework tenga efecto: no lo omitas.
 
 Lee `CLAUDE.md` en la raíz (si no existe, créalo con la cabecera `# CLAUDE.md`).
 
@@ -27,9 +27,9 @@ Lee `CLAUDE.md` en la raíz (si no existe, créalo con la cabecera `# CLAUDE.md`
 
 ```
 <!-- ARCHITECT:START — no eliminar este bloque -->
-@architect/learnings.md
-@architect/learnings/_index.md
-@architect/IT_stacks/_index_stacks.md
+@architect/assets/learnings.md
+@architect/assets/learnings/_index.md
+@architect/assets/IT_stacks/_index_stacks.md
 <!-- ARCHITECT:END -->
 ```
 
@@ -37,7 +37,7 @@ Lee `CLAUDE.md` en la raíz (si no existe, créalo con la cabecera `# CLAUDE.md`
 
 ### Paso 3 — Migrar datos previos (solo si aplica)
 
-Si en `$CLAUDE_PERSONAL_DIR` (de `.claude/settings.local.json#env`) existen `learnings.md`, `learnings/` o `IT_stacks/` con contenido que no está en `architect/`, no lo sobrescribas ni lo borres: lista las diferencias y pregunta al usuario si fusionarlas en `architect/`.
+Si en `$CLAUDE_PERSONAL_DIR` (de `.claude/settings.local.json#env`) existen `learnings.md`, `learnings/` o `IT_stacks/` con contenido que no está en `architect/assets/`, no lo sobrescribas ni lo borres: lista las diferencias y pregunta al usuario si fusionarlas en `architect/assets/`.
 
 ### Paso 4 — Commit
 
