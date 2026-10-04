@@ -1,0 +1,8 @@
+# Ficheros generados por starter/INIT.md — propios de cada proyecto, no del template
+CLAUDE.md
+.mcp.json
+.claude/settings.local.json
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
