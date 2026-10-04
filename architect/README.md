@@ -1,82 +1,39 @@
-# Starter Framework
+# Architect Framework
 
-Framework base de Claude Code. Proporciona skills reutilizables, output styles y sistema de personalización persistente.
+Conocimiento de arquitectura transversal para Claude Code: learnings y stacks IT compartidos entre proyectos y usuarios. Complementa al Starter Framework.
 
 ## Cómo inicializar
 
-Dile a Claude:
-
 ```
-"ejecuta starter/INIT.md"
+"ejecuta architect/INIT.md"
 ```
 
-o cualquier variante como "inicializa el proyecto" o "inicializa el starter framework". Claude leerá `starter/INIT.md` y configurará todo.
-
-INIT.md es idempotente — puede ejecutarse múltiples veces sin duplicar configuración. Re-ejecútalo después de `sys--template-pull starter` para aplicar cambios del template.
+INIT.md añade al `CLAUDE.md` del proyecto el bloque `ARCHITECT` con los imports de `architect/`. Sin ese paso, el contenido no se carga.
 
 ## Contenido
 
 ```
-starter/
-├── INIT.md               ← instalador autocontenido e idempotente
-├── README.md             ← este fichero
-├── assets/
-│   ├── config.yaml            ← configuración declarativa (MCP servers, permisos, output styles)
-│   ├── caveman.md             ← output style minimalista
-│   ├── destructive-check.sh   ← PreToolUse hook para operaciones destructivas (opt-in)
-│   ├── statusline-command.sh  ← script de statusline para Claude Code
-│   └── version-check.sh       ← comprueba versión del template al arranque
-└── skills/               ← pseudo-skills (invocación explícita por ruta)
-    ├── per--handoff.md   ← crea/recupera documentos de handoff entre sesiones
-    └── sys--context-report.md ← regenera project-tools.html con MCP servers y skills
+architect/
+├── INIT.md
+├── README.md
+├── config/{manifest.yaml, version}
+├── learnings.md        ← learnings transversales
+├── learnings/          ← learnings temáticos (_index.md + ficheros)
+└── IT_stacks/          ← recetas por plataforma (_index_stacks.md + ficheros)
 ```
 
-## Pseudo-skills (invocación por ruta explícita)
-
-Los pseudo-skills no se cargan en el contexto por defecto. Se invocan dando la ruta al fichero:
-
-```
-"ejecuta starter/skills/per--handoff.md"
-"ejecuta starter/skills/sys--context-report.md"
-```
-
-## Skills disponibles (tras inicializar)
+## Skills
 
 | Skill | Descripción |
 |-------|-------------|
-| `/gh--pull` | Sincroniza la rama local con el remote (git pull) |
-| `/gh--push` | Commit y push a GitHub con mensaje de commit generado automáticamente |
-| `/per--history` | Lee el historial de sesiones y presenta un resumen ponderado por antigüedad |
-| `/per--learn` | Añade aprendizajes a `learnings.md` en `CLAUDE_PERSONAL_DIR` |
-| `/per--add-task` | Declara una tarea durante la sesión; `per--session-close` la valida al cerrar |
-| `/per--stack` | Añade o actualiza entradas en los stack docs de `IT_stacks/` en `CLAUDE_PERSONAL_DIR` |
-| `/per--session-close` | Genera un resumen de la sesión y lo guarda en el historial persistente |
-| `/sys--template-pull <fw>` | Actualiza skills y framework `<fw>` del proyecto desde su repo template |
-| `/sys--template-push <fw>` | Propaga mejoras de skills y del framework `<fw>` desde el proyecto a su repo template |
+| `/per--learn` | Añade aprendizajes a `architect/learnings.md` o a un fichero temático de `architect/learnings/` |
+| `/per--stack` | Añade o actualiza entradas en `architect/IT_stacks/` |
 
-## Actualizar el framework
-
-Para recibir mejoras del template en tu proyecto:
+## Actualizar
 
 ```
-/sys--template-pull starter
+/sys--template-pull architect
+/sys--template-push architect
 ```
 
-Después de hacer pull, re-ejecuta `starter/INIT.md` para aplicar cambios en la configuración.
-
-Para propagar mejoras de skills desde tu proyecto al template:
-
-```
-/sys--template-push starter
-```
-
-## Personalización
-
-El sistema de personalización persiste en `$CLAUDE_PERSONAL_DIR/` (fuera del repo). Se configura durante `INIT.md`. Ficheros:
-
-- `soul.md` — identidad y principios de Claude
-- `user.md` — preferencias del usuario
-- `learnings.md` — observaciones acumuladas
-- `learnings/` — ficheros temáticos de aprendizajes (gestionados con `/per--learn`)
-- `IT_stacks/` — recetas de setup por plataforma (gestionados con `per--stack`)
-- `history/` — historial de sesiones
+Tras el pull, re-ejecutar `architect/INIT.md`. Los learnings y stacks escritos en un proyecto solo llegan al repo con `push`.
