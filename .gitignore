@@ -16,3 +16,9 @@ starter/
 .claude/skills/per--session-close/
 .claude/skills/sys--template-pull/
 .claude/skills/sys--template-push/
+
+# Generado por los INIT.md de cada framework (hooks y permisos) — propio de cada proyecto
+.claude/settings.json
+
+# Volcados de crash de bash
+*.stackdump
