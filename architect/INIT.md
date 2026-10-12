@@ -39,9 +39,29 @@ Si existe `<!-- ARCHITECT:START -->`, reemplaza el bloque completo hasta `<!-- A
 
 Si `CLAUDE.md` tiene un bloque `<!-- PERSONALIZATION:START -->` con líneas `@.../learnings.md`, `@.../learnings/_index.md` o `@.../IT_stacks/_index_stacks.md` (apuntando a `CLAUDE_PERSONAL_DIR`), elimina solo esas líneas. No toques `soul.md` ni `user.md`.
 
-### Paso 4 — Confirmar al usuario
+### Paso 4 — Registrar hook de versión en settings.json
 
-Informa de: skills verificados, bloque ARCHITECT añadido/actualizado, líneas eliminadas de PERSONALIZATION, y que hay que reiniciar Claude Code para cargar los imports.
+Lee `.claude/settings.json` (si no existe, tratarlo como `{}`). Comprueba si ya existe una entrada en `hooks.SessionStart[].hooks[]` con `"command": "bash architect/assets/version-check.sh"`.
+
+- **Sí existe** → omitir.
+- **No existe** → añadir al array `hooks.SessionStart[]` la siguiente entrada, preservando todas las entradas existentes:
+
+```json
+{
+  "hooks": [
+    {
+      "type": "command",
+      "command": "bash architect/assets/version-check.sh"
+    }
+  ]
+}
+```
+
+Escribir `.claude/settings.json` resultante.
+
+### Paso 5 — Confirmar al usuario
+
+Informa de: skills verificados, bloque ARCHITECT añadido/actualizado, líneas eliminadas de PERSONALIZATION, hook de versión (añadido | ya existía), y que hay que reiniciar Claude Code para cargar los imports.
 
 ---
 
