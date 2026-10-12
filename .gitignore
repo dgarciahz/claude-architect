@@ -6,3 +6,13 @@ CLAUDE.md
 # Archivos de sistema
 .DS_Store
 Thumbs.db
+
+# Starter framework: dependencia instalada con /sys--template-pull starter, no parte de este repo
+starter/
+.claude/skills/gh--pull/
+.claude/skills/gh--push/
+.claude/skills/per--add-task/
+.claude/skills/per--history/
+.claude/skills/per--session-close/
+.claude/skills/sys--template-pull/
+.claude/skills/sys--template-push/
