@@ -2,7 +2,7 @@
 
 Instrucciones para inicializar el Architect Framework en el proyecto actual. Idempotente: puede ejecutarse varias veces.
 
-El framework se instala con `/core--template-pull architect`, que copia `architect/` y los skills `arch--learn` y `arch--stack` a `.claude/skills/`. INIT.md no instala nada: comprueba los skills y conecta el contenido a `CLAUDE.md`.
+El framework se instala con `/core--template-pull architect`, que copia `architect/` y los skills `arch--learn` y `arch--it_component` a `.claude/skills/`. INIT.md no instala nada: comprueba los skills y conecta el contenido a `CLAUDE.md`.
 
 ## Cómo invocar
 
@@ -15,7 +15,7 @@ El framework se instala con `/core--template-pull architect`, que copia `archite
 
 ### Paso 1 — Verificar skills y contenido
 
-Comprueba que existen `.claude/skills/arch--learn/SKILL.md` y `.claude/skills/arch--stack/SKILL.md`, y los ficheros `architect/assets/learnings/learnings.md`, `architect/assets/learnings/_index.md` y `architect/assets/IT_components/_index_components.md`.
+Comprueba que existen `.claude/skills/arch--learn/SKILL.md` y `.claude/skills/arch--it_component/SKILL.md`, y los ficheros `architect/assets/learnings/learnings.md`, `architect/assets/learnings/_index.md` y `architect/assets/IT_components/_index_components.md`.
 
 Si falta alguno: informa de cuáles y de que hay que ejecutar `/core--template-pull architect`; detente. NUNCA los recrees vacíos.
 
@@ -68,4 +68,4 @@ Informa de: skills verificados, bloque ARCHITECT añadido/actualizado, líneas e
 ## Notas
 
 - Re-ejecutar aplica cambios del template sin perder contenido.
-- Para desinstalar: elimina el bloque ARCHITECT de `CLAUDE.md`, el directorio `architect/` y los skills `arch--learn` y `arch--stack`.
+- Para desinstalar: elimina el bloque ARCHITECT de `CLAUDE.md`, el directorio `architect/` y los skills `arch--learn` y `arch--it_component`.

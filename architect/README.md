@@ -28,7 +28,7 @@ architect/
 | Skill | Descripción |
 |-------|-------------|
 | `/arch--learn` | Añade aprendizajes a `architect/assets/learnings/learnings.md` o a un fichero temático de `architect/assets/learnings/` |
-| `/arch--stack` | Añade o actualiza entradas en `architect/assets/IT_components/` |
+| `/arch--it_component` | Añade o actualiza entradas en `architect/assets/IT_components/` |
 
 ## Actualizar
 
