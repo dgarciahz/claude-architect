@@ -1,10 +1,10 @@
-# Skill: per--learn
+# Skill: arch--learn
 
 Añade uno o varios aprendizajes a `architect/assets/learnings/learnings.md` (o a un fichero temático de `architect/assets/learnings/`) del proyecto.
 
 ## Trigger
 
-Usar cuando el usuario invoque `/per--learn` o pida guardar un aprendizaje, corrección o patrón a recordar.
+Usar cuando el usuario invoque `/arch--learn` o pida guardar un aprendizaje, corrección o patrón a recordar.
 
 ## Instrucciones
 
@@ -14,7 +14,7 @@ Las rutas son relativas a la raíz del proyecto: `architect/assets/learnings/lea
 
 ### 2. Determinar el aprendizaje
 
-Si el usuario pasó texto como argumento al invocar el skill (ej. `/per--learn nunca usar X porque Y`), úsalo como punto de partida.
+Si el usuario pasó texto como argumento al invocar el skill (ej. `/arch--learn nunca usar X porque Y`), úsalo como punto de partida.
 
 Si no hay argumento, pregunta al usuario qué aprendizaje quiere guardar.
 

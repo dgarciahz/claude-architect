@@ -1,10 +1,10 @@
-# Skill: per--stack
+# Skill: arch--stack
 
 Añade o actualiza entradas en los stack docs de `architect/assets/IT_stacks/`.
 
 ## Trigger
 
-Usar cuando el usuario invoque `/per--stack [texto]` o pida "añadir al stack", "actualizar stack", "guardar en stack", etc.
+Usar cuando el usuario invoque `/arch--stack [texto]` o pida "añadir al stack", "actualizar stack", "guardar en stack", etc.
 
 ## Instrucciones
 

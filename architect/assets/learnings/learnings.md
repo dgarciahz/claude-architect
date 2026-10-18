@@ -1,7 +1,7 @@
 # Learnings — Registro de Feedback y Correcciones
 
 Registro acumulativo de errores pasados, correcciones del usuario y patrones a evitar o repetir.
-Actualizar con `/per--session-close` o manualmente tras recibir feedback relevante.
+Actualizar con `/core--session-close` o manualmente tras recibir feedback relevante.
 
 ---
 

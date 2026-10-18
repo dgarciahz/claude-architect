@@ -13,4 +13,4 @@ Catálogo de stack docs por plataforma/entorno. Actualizar al crear un nuevo fic
 
 **Instrucción de carga automática**: cuando la sesión trate setup o configuración de alguna de las plataformas de la tabla, usa `Read` para cargar el stack file antes de responder por primera vez. Informa: "He cargado IT_stacks/<fichero>.md para esta sesión."
 
-**Para añadir o actualizar entradas**: usa el skill `/per--stack`. Gestiona deduplicación y evita contradicciones.
+**Para añadir o actualizar entradas**: usa el skill `/arch--stack`. Gestiona deduplicación y evita contradicciones.

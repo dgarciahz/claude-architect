@@ -51,7 +51,7 @@ vaya a leerse por este camino (usar `[OK]`/`[FAIL]`/`->` en vez de
 como parche puntual.
 
 ## Git Config
-<!-- reservado — añadir con per--stack -->
+<!-- reservado — añadir con arch--stack -->
 
 ## Python
 Instalación en `C:\Python314\python.exe`. Invocar con `py` desde terminal o con la ruta completa en configs.
