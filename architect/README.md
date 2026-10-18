@@ -33,8 +33,8 @@ architect/
 ## Actualizar
 
 ```
-/sys--template-pull architect
-/sys--template-push architect
+/core--template-pull architect
+/core--template-push architect
 ```
 
 Tras el pull, re-ejecutar `architect/INIT.md`. Los learnings y stacks escritos en un proyecto solo llegan al repo con `push`.
