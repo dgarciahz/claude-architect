@@ -5,6 +5,7 @@ Catálogo de docs por componente (plataforma/herramienta/entorno). Actualizar al
 | Fichero | Plataformas / herramientas | Cuándo cargar |
 |---------|---------------------------|---------------|
 | [windows.md](windows.md) | Windows, Git Bash, SSL, schannel, line endings, paths, bash | Cuando la sesión implique setup o configuración en entorno Windows |
+| [python.md](python.md) | Python, Poetry, pip, poetry.lock, pypi.org, sandbox | Cuando la sesión trate dependencias, `poetry` o `pip` |
 | [llmwiki.md](llmwiki.md) | llmwiki, llm-wiki-compiler, OKF wiki compiler | Cuando la sesión trate configuración, límites o coste de `llmwiki`/`llm-wiki-compiler` |
 | [aws.md](aws.md) | AWS, Lambda, MemorySize, cuotas de cuenta, CloudFormation, S3, SSM | Cuando la sesión trate cuotas, límites de servicio, soporte AWS o comportamiento de CloudFormation/S3/SSM |
 | [lightrag.md](lightrag.md) | LightRAG, RAG, grafo de conocimiento, pgvector, workspace, PGTableGraphStorage, Apache AGE, MCP server, embeddings | Cuando la sesión trate configuración, storage, despliegue o arquitectura de LightRAG |

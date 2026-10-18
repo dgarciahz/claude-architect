@@ -20,7 +20,8 @@ architect/
 ├── skills/                  ← pseudo-skills (invocación explícita por ruta); vacío por ahora
 └── assets/
     ├── learnings/           ← learnings: learnings.md (transversales), _index.md y ficheros temáticos
-    └── IT_components/       ← recetas por plataforma (_index_components.md + ficheros)
+    ├── IT_components/       ← recetas por plataforma/herramienta (_index_components.md + ficheros)
+    └── stack_catalogs/      ← bundles de componentes por stack; INIT.md importa los elegidos en CLAUDE.md
 ```
 
 ## Skills
