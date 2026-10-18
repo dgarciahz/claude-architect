@@ -8,8 +8,9 @@ CLAUDE.md
 Thumbs.db
 
 # Starter framework: directorio local instalado con /core--template-pull starter, no parte de este repo
-# (los skills core--* sí se versionan, pero son de starter y se actualizan con /core--template-pull)
 starter/
+# Skills core--* de starter: en disco para uso local, no se versionan en el repo de architect
+.claude/skills/core--*/
 
 # Generado por los INIT.md de cada framework (hooks y permisos) — propio de cada proyecto
 .claude/settings.json
