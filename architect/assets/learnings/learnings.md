@@ -52,3 +52,8 @@ Actualizar con `/core--session-close` o manualmente tras recibir feedback releva
 **Contexto**: revisando los overrides de BMAD (`_bmad/custom/bmad-agent-architect.toml` y `bmad-create-architecture.toml`), que están en git pero apuntan a `C:/david/.../claude-personalization`; problema ya visto antes con rutas a aplicaciones al pasar de un despliegue a otro
 **Feedback**: las rutas absolutas o específicas de máquina se cuelan en ficheros versionados y se rompen al clonar, cambiar de máquina o desplegar; el fallo aparece lejos de donde se introdujo
 **Regla**: nada que se versione en git lleva rutas absolutas ni específicas de máquina (letra de unidad, `/home/...`, ejecutables de aplicaciones). Usar rutas relativas a la raíz del proyecto (`{project-root}/...`); para lo externo al repo, variable de entorno o valor de configuración. Las absolutas solo valen en capas no versionadas (`*.user.toml`, `.claude/settings.local.json`, `.env`). Si voy a escribir una ruta con letra de unidad o `/home/` en un fichero trackeado, parar y buscar otra forma. Excepción por diseño: el `CLAUDE.md` con `@C:\...` del sistema de personalización es por usuario y máquina y está gitignoreado en modo template.
+
+## 2026-10-18 — Backup fuera del repo antes de merge destructivo
+**Contexto**: antes de un `merge` que borraba ficheros ignorados necesarios en local, el backup se hizo con `cp -rn` dentro del repo.
+**Feedback**: el backup quedó como `starter_bak/` huérfano sin trackear, y el hook bloqueó su borrado.
+**Regla**: antes de un `merge` o `checkout` que pueda borrar ficheros ignorados necesarios, hacer el backup fuera del repo (directorio temporal o scratchpad) y restaurarlo después.
