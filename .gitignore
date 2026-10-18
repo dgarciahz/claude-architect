@@ -7,15 +7,9 @@ CLAUDE.md
 .DS_Store
 Thumbs.db
 
-# Starter framework: dependencia instalada con /core--template-pull starter, no parte de este repo
+# Starter framework: directorio local instalado con /core--template-pull starter, no parte de este repo
+# (los skills core--* sí se versionan, pero son de starter y se actualizan con /core--template-pull)
 starter/
-.claude/skills/core--gh-pull/
-.claude/skills/core--gh-push/
-.claude/skills/core--add-task/
-.claude/skills/core--history/
-.claude/skills/core--session-close/
-.claude/skills/core--template-pull/
-.claude/skills/core--template-push/
 
 # Generado por los INIT.md de cada framework (hooks y permisos) — propio de cada proyecto
 .claude/settings.json
