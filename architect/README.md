@@ -20,7 +20,7 @@ architect/
 ├── skills/                  ← pseudo-skills (invocación explícita por ruta); vacío por ahora
 └── assets/
     ├── learnings/           ← learnings: learnings.md (transversales), _index.md y ficheros temáticos
-    └── IT_stacks/           ← recetas por plataforma (_index_stacks.md + ficheros)
+    └── IT_components/       ← recetas por plataforma (_index_components.md + ficheros)
 ```
 
 ## Skills
@@ -28,7 +28,7 @@ architect/
 | Skill | Descripción |
 |-------|-------------|
 | `/arch--learn` | Añade aprendizajes a `architect/assets/learnings/learnings.md` o a un fichero temático de `architect/assets/learnings/` |
-| `/arch--stack` | Añade o actualiza entradas en `architect/assets/IT_stacks/` |
+| `/arch--stack` | Añade o actualiza entradas en `architect/assets/IT_components/` |
 
 ## Actualizar
 

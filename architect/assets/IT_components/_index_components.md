@@ -1,6 +1,6 @@
-# IT Stacks — Índice de Ficheros
+# IT Components — Índice de Ficheros
 
-Catálogo de stack docs por plataforma/entorno. Actualizar al crear un nuevo fichero en `IT_stacks/`.
+Catálogo de docs por componente (plataforma/herramienta/entorno). Actualizar al crear un nuevo fichero en `IT_components/`.
 
 | Fichero | Plataformas / herramientas | Cuándo cargar |
 |---------|---------------------------|---------------|
@@ -12,6 +12,6 @@ Catálogo de stack docs por plataforma/entorno. Actualizar al crear un nuevo fic
 | [postgresql.md](postgresql.md) | PostgreSQL, PgBouncer, conexiones, pooling, max_connections | Cuando la sesión trate configuración, rendimiento o despliegue de PostgreSQL |
 | [n8n.md](n8n.md) | n8n, workflows, MCP server de n8n, Chat Trigger, Webhook | Cuando la sesión trate creación o edición de workflows n8n o su uso vía MCP |
 
-**Instrucción de carga automática**: cuando la sesión trate setup o configuración de alguna de las plataformas de la tabla, usa `Read` para cargar el stack file antes de responder por primera vez. Informa: "He cargado IT_stacks/<fichero>.md para esta sesión."
+**Instrucción de carga automática**: cuando la sesión trate setup o configuración de alguna de las plataformas de la tabla, usa `Read` para cargar el stack file antes de responder por primera vez. Informa: "He cargado IT_components/<fichero>.md para esta sesión."
 
 **Para añadir o actualizar entradas**: usa el skill `/arch--stack`. Gestiona deduplicación y evita contradicciones.

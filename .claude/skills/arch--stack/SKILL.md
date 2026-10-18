@@ -1,6 +1,6 @@
 # Skill: arch--stack
 
-Añade o actualiza entradas en los stack docs de `architect/assets/IT_stacks/`.
+Añade o actualiza entradas en los stack docs de `architect/assets/IT_components/`.
 
 ## Trigger
 
@@ -10,11 +10,11 @@ Usar cuando el usuario invoque `/arch--stack [texto]` o pida "añadir al stack",
 
 ### 1. Localizar el framework
 
-Las rutas son relativas a la raíz del proyecto: `architect/assets/IT_stacks/`. Si `architect/` no existe, informa que el Architect Framework no está instalado (`sys--template-pull architect` + `architect/INIT.md`) y detente.
+Las rutas son relativas a la raíz del proyecto: `architect/assets/IT_components/`. Si `architect/` no existe, informa que el Architect Framework no está instalado (`sys--template-pull architect` + `architect/INIT.md`) y detente.
 
 ### 2. Identificar stack file
 
-Lee `architect/assets/IT_stacks/_index_stacks.md`. Determina a qué fichero pertenece la nueva info. Si no es obvio, muestra la tabla al usuario y pregunta.
+Lee `architect/assets/IT_components/_index_components.md`. Determina a qué fichero pertenece la nueva info. Si no es obvio, muestra la tabla al usuario y pregunta.
 
 ### 3. Leer el stack file
 
@@ -43,4 +43,4 @@ Muestra el bloque añadido/modificado tal como quedó en el fichero.
 ## Notas
 
 - NUNCA sobreescribas una sección entera — solo la entrada afectada.
-- Si el usuario quiere crear un stack file nuevo (nueva plataforma): crea el `.md` en `IT_stacks/` con cabecera y secciones iniciales, y añade la fila correspondiente en `_index_stacks.md`.
+- Si el usuario quiere crear un stack file nuevo (nueva plataforma): crea el `.md` en `IT_components/` con cabecera y secciones iniciales, y añade la fila correspondiente en `_index_components.md`.

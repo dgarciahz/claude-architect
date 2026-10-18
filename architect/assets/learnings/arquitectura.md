@@ -26,7 +26,7 @@
 **Regla**: Al configurar herramientas de terceros con muchos parámetros internos ajustables (RAG, compiladores, frameworks), mantenerse cerca de los valores por defecto salvo necesidad concreta y medida. Documentar explícitamente cualquier desviación de default y por qué, para poder revisarla en cada upgrade.
 
 ## 2026-08-05 — Señal de alerta: piezas de "conocimiento consultable" sin retrieval real
-**Contexto**: Descarte de `llm-wiki-compiler` (llmwiki) como motor de conocimiento consultable de OKF, sustituido por LightRAG — ver `IT_stacks/lightrag.md`.
+**Contexto**: Descarte de `llm-wiki-compiler` (llmwiki) como motor de conocimiento consultable de OKF, sustituido por LightRAG — ver `IT_components/lightrag.md`.
 **Feedback**: El motivo real del descarte no fue un límite puntual (cuota agotada) sino un defecto de diseño: llmwiki no usa RAG ni embeddings — en cada llamada reenvía el source completo más el índice/páginas relacionadas completas, así que el coste escala con el nº de conceptos y el tamaño de cada fuente, no con lo que realmente hace falta para responder.
 **Regla**: Al evaluar una pieza de infra que promete "conocimiento consultable" (wiki compiler, motor de búsqueda semántica, etc.), verificar explícitamente si el mecanismo interno hace retrieval real (embeddings + selección de contexto relevante) o si en el fondo reenvía contexto completo/creciente en cada llamada. Esto último no es descarte automático — puede bastar para volúmenes pequeños — pero es la señal concreta que debe abrir una reflexión más profunda sobre si la pieza escala al caso de uso real, antes de comprometerse a ella.
 
@@ -35,7 +35,7 @@
 **Regla**: Tras diseñar varios recursos relacionados entre sí, releer el conjunto para comprobar que cada justificación individual sigue siendo cierta con las demás piezas ya puestas — no defender una pieza mirándola aislada de las decisiones tomadas alrededor.
 
 ## 2026-08-07 — Verificar cifras de pricing/billing cloud contra fuente actual, nunca contra memoria
-**Contexto**: Misma sesión de diseño LightRAG-EC2. Se afirmó que la IP pública efímera de EC2 es gratis (a diferencia de la Elastic IP). Ese dato cambió en AWS en febrero de 2024 — ahora toda IPv4 pública factura por igual, esté fija o no (ver `IT_stacks/aws.md`).
+**Contexto**: Misma sesión de diseño LightRAG-EC2. Se afirmó que la IP pública efímera de EC2 es gratis (a diferencia de la Elastic IP). Ese dato cambió en AWS en febrero de 2024 — ahora toda IPv4 pública factura por igual, esté fija o no (ver `IT_components/aws.md`).
 **Regla**: En cualquier pregunta de coste de un servicio cloud, verificar contra la página de pricing o una fuente reciente antes de dar una cifra — el conocimiento propio puede estar desactualizado sin que lo parezca, sobre todo en cosas que cambian de política de precios sin avisar mucho.
 
 ## 2026-08-21 — Watermark de progreso: no avanzarlo sobre registros saltados, solo sobre procesados

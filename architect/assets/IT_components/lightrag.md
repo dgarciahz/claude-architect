@@ -164,7 +164,7 @@ Para forzar reprocesamiento real en pruebas: no basta con cambiar el nombre de f
 
 ## Logs del contenedor — extraerlos sin depender del túnel
 
-`docker compose logs -t` vía `aws ssm send-command` (canal independiente del port-forward interactivo) da timestamps reales de cada etapa del pipeline (extracción, merge, upsert) — útil para medir rendimiento real sin depender de polling por API. Ver `IT_stacks/aws.md` sobre el límite de 24.000 caracteres de `get-command-invocation`.
+`docker compose logs -t` vía `aws ssm send-command` (canal independiente del port-forward interactivo) da timestamps reales de cada etapa del pipeline (extracción, merge, upsert) — útil para medir rendimiento real sin depender de polling por API. Ver `IT_components/aws.md` sobre el límite de 24.000 caracteres de `get-command-invocation`.
 
 ## Mecánica interna de ingesta, dedup y búsqueda
 

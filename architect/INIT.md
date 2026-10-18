@@ -15,7 +15,7 @@ El framework se instala con `/core--template-pull architect`, que copia `archite
 
 ### Paso 1 — Verificar skills y contenido
 
-Comprueba que existen `.claude/skills/arch--learn/SKILL.md` y `.claude/skills/arch--stack/SKILL.md`, y los ficheros `architect/assets/learnings/learnings.md`, `architect/assets/learnings/_index.md` y `architect/assets/IT_stacks/_index_stacks.md`.
+Comprueba que existen `.claude/skills/arch--learn/SKILL.md` y `.claude/skills/arch--stack/SKILL.md`, y los ficheros `architect/assets/learnings/learnings.md`, `architect/assets/learnings/_index.md` y `architect/assets/IT_components/_index_components.md`.
 
 Si falta alguno: informa de cuáles y de que hay que ejecutar `/core--template-pull architect`; detente. NUNCA los recrees vacíos.
 
@@ -31,13 +31,13 @@ Si existe `<!-- ARCHITECT:START -->`, reemplaza el bloque completo hasta `<!-- A
 <!-- ARCHITECT:START — no eliminar este bloque -->
 @architect/assets/learnings/learnings.md
 @architect/assets/learnings/_index.md
-@architect/assets/IT_stacks/_index_stacks.md
+@architect/assets/IT_components/_index_components.md
 <!-- ARCHITECT:END -->
 ```
 
 ### Paso 3 — Quitar referencias antiguas de PERSONALIZATION
 
-Si `CLAUDE.md` tiene un bloque `<!-- PERSONALIZATION:START -->` con líneas `@.../learnings.md`, `@.../learnings/_index.md` o `@.../IT_stacks/_index_stacks.md` (apuntando a `CLAUDE_PERSONAL_DIR`), elimina solo esas líneas. No toques `soul.md` ni `user.md`.
+Si `CLAUDE.md` tiene un bloque `<!-- PERSONALIZATION:START -->` con líneas `@.../learnings.md`, `@.../learnings/_index.md` o `@.../IT_components/_index_components.md` (apuntando a `CLAUDE_PERSONAL_DIR`), elimina solo esas líneas. No toques `soul.md` ni `user.md`.
 
 ### Paso 4 — Registrar hook de versión en settings.json
 
